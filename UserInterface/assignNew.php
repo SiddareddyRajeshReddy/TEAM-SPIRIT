@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
         .ani1 {
             animation-name: MyAnimation1;
             animation-duration: 2s;
-            animation-delay: 1s;
+            animation-delay: 200ms;
             animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
             animation-fill-mode: forwards;
         }
@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
         .ani2 {
             animation-name: MyAnimation1;
             animation-duration: 2s;
-            animation-delay: 2s;
+            animation-delay: 200ms;
             animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
             animation-fill-mode: forwards;
         }
@@ -49,18 +49,18 @@ if (!isset($_SESSION['username'])) {
 
 <body class="flex flex-col items-center justify-center min-h-screen bg-[#FFFADA]">
 <nav class="flex justify-end w-screen relative bottom-[13vh] right-[3vw]">
-    <a href="./dashboard.php" class="text-2xl bg-[#D9D9D9] bg-gradient-to-b from-[#D9D9D9] to-[#FFFFFF] p-[0.75rem] rounded-[2vw] ani2 invisible">↩️</a>
+    <a href="./dashboard.php" class="text-2xl bg-[#D9D9D9] bg-gradient-to-b from-[#D9D9D9] to-[#FFFFFF] p-[0.75rem] rounded-[2vw] ani2 invisible fixed top-[2vh]">↩️</a>
 </nav>
 <p class="col-span-1 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white flex justify-center text-red-500 rounded-[40px]">A user could only be able to work in only 5 teams at time</p>
-<div class="bg-[#F8EEEC] flex justify-center flex-col items-center border-[2px] border-gray-400 py-[5vh] w-[80vw] rounded-[40px]">
-    <p class="mb-[7vh] text-5xl font-medium text-[#FFFFFF] ani1 invisible text-blue-400" style="font-family: cursive;">ADD TO YOUR TEAM</p>
+<div class="bg-[#F8EEEC] flex justify-center flex-col items-center border-[2px] border-gray-400 py-[5vh] w-[80vw] rounded-[40px] my-[2vh]">
+    <p class="mb-[7vh] text-5xl font-medium text-[#FFFFFF] ani2 invisible text-blue-400" style="font-family: cursive;">ADD TO YOUR TEAM</p>
     <form action="" method="get">
-        <div class="grid grid-cols-12 w-[75vw] border-[2px] border-black ani2 invisible bg-blue-400">
-            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black">S.No</p>
-            <p class="col-span-3 px-[2vw] py-[2vh] border-[1px] border-black">Name</p>
-            <p class="col-span-2 px-[2vw] py-[2vh] border-[1px] border-black">Contact</p>
-            <p class="col-span-5 px-[2vw] py-[2vh] border-[1px] border-black">Email</p>
-            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black">In/Out</p>
+        <div class="grid grid-cols-12 w-[75vw] border-[2px] ani1 border-black bg-blue-400 invisible my-[1vh]">
+            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">S.No</p>
+            <p class="col-span-3 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Name</p>
+            <p class="col-span-2 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Contact</p>
+            <p class="col-span-5 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Email</p>
+            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">In/Out</p>
             <?php
             if($_SERVER['REQUEST_METHOD'] == 'POST')
             {

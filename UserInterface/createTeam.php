@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
         .ani1 {
             animation-name: MyAnimation1;
             animation-duration: 2s;
-            animation-delay: 1s;
+            animation-delay: 200ms;
             animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
             animation-fill-mode: forwards;
         }
@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
         .ani2 {
             animation-name: MyAnimation1;
             animation-duration: 2s;
-            animation-delay: 2s;
+            animation-delay: 200ms;
             animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
             animation-fill-mode: forwards;
         }
@@ -59,11 +59,11 @@ if (!isset($_SESSION['username'])) {
                 <label for="teamname"><b>Team Name</b></label>
                 <input type="text" name="teamname" id="teamname" placeholder="Name" class="bg-white text-black">
             </div>
-            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black">S.No</p>
-            <p class="col-span-3 px-[2vw] py-[2vh] border-[1px] border-black">Name</p>
-            <p class="col-span-2 px-[2vw] py-[2vh] border-[1px] border-black">Contact</p>
-            <p class="col-span-5 px-[2vw] py-[2vh] border-[1px] border-black">Email</p>
-            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black">In/Out</p>
+            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">S.No</p>
+            <p class="col-span-3 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Name</p>
+            <p class="col-span-2 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Contact</p>
+            <p class="col-span-5 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Email</p>
+            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">In/Out</p>
             <?php
             $sql = "SELECT * FROM `users`";
             $result = mysqli_query($conn, $sql);
