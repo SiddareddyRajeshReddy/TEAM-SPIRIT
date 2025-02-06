@@ -51,6 +51,7 @@ if (!isset($_SESSION['username'])) {
 <nav class="flex justify-end w-screen relative bottom-[13vh] right-[3vw]">
     <a href="./dashboard.php" class="text-2xl bg-[#D9D9D9] bg-gradient-to-b from-[#D9D9D9] to-[#FFFFFF] p-[0.75rem] rounded-[2vw] ani2 invisible">↩️</a>
 </nav>
+<p class="col-span-1 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white flex justify-center text-red-500 rounded-[40px]">A user could only be able to work in only 5 teams at time</p>
 <div class="bg-[#F8EEEC] flex justify-center flex-col items-center border-[2px] border-gray-400 py-[5vh] w-[80vw] rounded-[40px]">
     <p class="mb-[7vh] text-5xl font-medium text-[#FFFFFF] ani1 invisible text-blue-400" style="font-family: cursive;">ADD TO YOUR TEAM</p>
     <form action="" method="get">
@@ -79,23 +80,34 @@ if (!isset($_SESSION['username'])) {
                     echo '<p class="col-span-1 px-[2vw] py-[1vh] border-[1px] border-black bg-white">' . ($count++) . '</p>
                         <p class="col-span-3 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white">' . $row['username'] . '</p>
                         <p class="col-span-2 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white">' . $row['contact'] . '</p>
-                        <p class="col-span-5 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white">' . $row['email'] . '</p>
-                        <p class="col-span-1 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white flex justify-center">
-                            <label for="' . $row['user_id'] . '"></label>
-                            <input type="checkbox" name="' . $row['user_id'] . '" id="user_id" value=' . $row['user_id'] . '>
+                        <p class="col-span-5 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white">' . $row['email'] . '</p>';
+                        $sql = "SELECT * FROM `relations` where `user_id` = '$uid'";
+                        $result2 = mysqli_query($conn,$sql);
+                        if(mysqli_num_rows($result2) < 5)
+                        {
+                            echo '<p class="col-span-1 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white flex justify-center">
+                                <label for="' . $row['user_id'] . '"></label>
+                                <input type="checkbox" name="' . $row['user_id'] . '" id="user_id" value=' . $row['user_id'] . '>
+                            </p>';
+                        }
+                        else
+                        {
+                            echo '<p class="col-span-1 px-[2vw] py-[1vh] border-[1px] border-black hover:bg-blue-400 bg-white flex justify-center text-red-500 ">
+                                    '.mysqli_num_rows($result1).' 
                         </p>';
+                        }
                     }
                 }
             }
             if($count == 1)
             {
                 echo '<div class="col-span-12 flex bg-white py-[1vh] px-[2vw] justify-center"><img src="../images/err.png" alt=""></div>
-                <div class="col-span-12 flex justify-center bg-red-400 hover:bg-red-500">
                 </form>
-                 <form method="post" action="../UserInterface/teamPage.php">
-                <button class="w-[100%] h-[100%] py-[1vh]" name="team_id" id="team_id" type="submit" value="'.$team_id.'">Return</button>
+                 </div>
+                <div class="col-span-12 flex justify-center px-[2vw] rounded-[40px] bg-red-400 hover:bg-red-500">
+                <form method="post" action="../UserInterface/teamPage.php">
+                    <button class="w-[100%] h-[100%] py-[1vh]" name="team_id" id="team_id" type="submit" value="'.$team_id.'">Return</button>
                 <form>
-            </div>
             </div>';
             }
             else{
