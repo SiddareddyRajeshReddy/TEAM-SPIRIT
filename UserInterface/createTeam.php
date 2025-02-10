@@ -63,7 +63,7 @@ if (!isset($_SESSION['username'])) {
             <p class="col-span-3 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Name</p>
             <p class="col-span-2 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Contact</p>
             <p class="col-span-5 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Email</p>
-            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">In/Out</p>
+            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-hidden">In/Out</p>
             <?php
             $sql = "SELECT * FROM `users`";
             $result = mysqli_query($conn, $sql);

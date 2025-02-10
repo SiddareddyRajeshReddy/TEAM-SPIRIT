@@ -75,8 +75,8 @@
     </style>
 </head>
 
-<body class="ani bg-gradient-to-b from-[#5FC4DB] to-[#C4916B] flex justify-center items-center h-screen">
-    <p class="invisible ani1 absolute top-[10vh] text-3xl" style="font-family: cursive;">Sign up to start and become a member of team spirit</p>
+<body class="ani bg-gradient-to-b from-[#5FC4DB] to-[#C4916B] flex justify-center items-center h-screen text-xs md:text-sm xl:text-2xl lg:text-md ">
+    <p class="invisible ani1 absolute top-[10vh] text-xl md:text-sm xl:text-3xl lg:text-md" style="font-family: cursive;">Sign up to start and become a member of team spirit</p>
     <div class="w-[50vw] h-[80vh] absolute left-[10vw] top-[20vh]">
         <form action="../backendLogics/signin_backend.php" method="post" class="invisible ani1 text-2xl">
             <label for="username"></label>
@@ -93,7 +93,7 @@
     <div class="w-[50vw] absolute top-[30vh] left-[25vw] ani2 opacity-25">
         <img src="../images/Logo2.png" alt="">
     </div>
-    <p class="invisible ani1 absolute bottom-[5vh] text-xl" style="font-family: cursive;">Already have a account? <a href="./login.php" class="text-red-800">Login In</a></p>
+    <p class="invisible ani1 absolute top-[95vh] text-xl" style="font-family: cursive;">Already have a account? <a href="./login.php" class="text-red-800">Login In</a></p>
 </body>
 
 </html>

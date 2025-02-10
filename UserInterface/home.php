@@ -52,7 +52,7 @@
     </style>
 </head>
 
-<body class="ani bg-green-300 flex flex-col justify-center items-center">
+<body class="ani bg-green-300 flex flex-col justify-center items-center text-xs md:text-sm xl:text-2xl lg:text-md">
     <div class="w-[42vw] relative top-[10vh]">
         <img src="../images/TEAM SPIRIT.png" alt="" class="invisible ani1">
     </div>
