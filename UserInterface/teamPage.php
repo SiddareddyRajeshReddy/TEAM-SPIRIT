@@ -1,5 +1,5 @@
 <?php
-include '/xampp/htdocs/TeamSpirit/backendLogics/msg_backend.php';
+include '/xampp/htdocs/TeamSpirit/backendLogics/db.php';
 if (!isset($_SESSION['username'])) {
     header("Location: /TeamSpirit/UserInterface/login.php");
 }
@@ -152,13 +152,12 @@ if (!isset($_SESSION['username'])) {
             echo '<p class="flex justify-start items-center col-span-10 bg-blue-200 rounded-[20px] min-h-[5vh] overflow-auto no-scrollbar px-[1vw]">'.$row['msg'].'</p>';
         }
         echo '</div>
-        <form action="" class="w-[75vw] my-[2vh]" method="get">
+        <form action="../backendLogics/msg_backend.php" class="w-[75vw] my-[2vh]" method="get">
            <input type="text" class="w-[90%] h-[5vh] rounded-[40px] pl-[2vw]" name="msg" id="msg" placeholder="Enter Your message">
            <button type="submit" class="bg-green-300 px-[2vw] py-[1vh] rounded-[35px] hover:bg-green-400" value='.$team_id.' name="team_id" id="team_id">send</button>
         </form>
     <div>
         <script src="../jsfiles/teamPage.js"></script>';
-    ?>
-    </body> 
+    ?>   
 </html>
 <div>

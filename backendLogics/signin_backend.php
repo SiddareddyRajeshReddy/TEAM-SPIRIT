@@ -24,7 +24,8 @@
             }
             else
             {
-                $sql = "INSERT INTO `users`(`username`, `email`, `contact`, `password`) VALUES('$name', '$email', '$contact', '$password')";
+                $pass = password_hash($password, PASSWORD_DEFAULT);
+                $sql = "INSERT INTO `users`(`username`, `email`, `contact`, `password`) VALUES('$name', '$email', '$contact', '$pass')";
                 $result = mysqli_query($conn, $sql);
                 if($result)
                     echo "<script>alert('You have successfully registered!!!Redirecting...'); window.location.href = '/TeamSpirit/UserInterface/login.php';</script>";
