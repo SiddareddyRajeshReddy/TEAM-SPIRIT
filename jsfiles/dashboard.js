@@ -5,6 +5,8 @@ function menuOpener(e)
     let btn = document.querySelector('.btn');
     if(menu.classList.contains('moveOM'))
     {
+        menu.classList.add('moveIM');
+        menu.classList.remove('moveOM');
         menu.animate(
             [
               { transform: 'translateX(-20vw)' }, 
@@ -15,13 +17,13 @@ function menuOpener(e)
               delay: 500,     
             }
           ).onfinish = () => {
-            menu.classList.add('moveIM');
-            menu.classList.remove('moveOM');
             menu.style.transform = 'translateX(0vw)';
         }; 
     }
     else if(menu.classList.contains('moveIM'))
     {
+        menu.classList.remove('moveIM');
+        menu.classList.add('moveOM');
         menu.animate(
             [
               { transform: 'translateX(0vw)' }, 
@@ -32,13 +34,13 @@ function menuOpener(e)
               delay: 500,     
             }
           ).onfinish = () => {
-            menu.classList.remove('moveIM');
-            menu.classList.add('moveOM');
             menu.style.transform = 'translateX(-20vw)';
         };
     }
     if(grid.classList.contains('moveOG'))
         {
+            grid.classList.remove('moveOG');
+            grid.classList.add('moveIG');
             grid.animate(
                 [
                   { transform: 'translateX(-10vw)' }, 
@@ -49,13 +51,13 @@ function menuOpener(e)
                   delay: 500,     
                 }
               ).onfinish = () => {
-                grid.classList.remove('moveOG');
-                grid.classList.add('moveIG');
                 grid.style.transform = 'translateX(0vw)';
             };
         }
         else if(grid.classList.contains('moveIG'))
         {
+            grid.classList.remove('moveIG');
+            grid.classList.add('moveOG');
             grid.animate(
                 [
                   { transform: 'translateX(0vw)' }, 
@@ -66,8 +68,6 @@ function menuOpener(e)
                   delay: 500,     
                 }
               ).onfinish = () => {
-                grid.classList.remove('moveIG');
-                grid.classList.add('moveOG');
                 grid.style.transform = 'translateX(-10vw)';
             };
         }

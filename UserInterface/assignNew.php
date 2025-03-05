@@ -13,6 +13,9 @@ if (!isset($_SESSION['username'])) {
     <title>Create Team</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
         .ani1 {
             animation-name: MyAnimation1;
             animation-duration: 2s;
@@ -56,11 +59,11 @@ if (!isset($_SESSION['username'])) {
     <p class="mb-[7vh] text-5xl font-medium text-[#FFFFFF] ani2 invisible text-blue-400" style="font-family: cursive;">ADD TO YOUR TEAM</p>
     <form action="" method="get">
         <div class="grid grid-cols-12 w-[75vw] border-[2px] ani1 border-black bg-blue-400 invisible my-[1vh]">
-            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">S.No</p>
-            <p class="col-span-3 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Name</p>
-            <p class="col-span-2 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Contact</p>
-            <p class="col-span-5 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">Email</p>
-            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto">In/Out</p>
+            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto no-scrollbar">S.No</p>
+            <p class="col-span-3 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto no-scrollbar">Name</p>
+            <p class="col-span-2 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto no-scrollbar">Contact</p>
+            <p class="col-span-5 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto no-scrollbar">Email</p>
+            <p class="col-span-1 px-[2vw] py-[2vh] border-[1px] border-black overflow-auto no-scrollbar">In/Out</p>
             <?php
             if($_SERVER['REQUEST_METHOD'] == 'POST')
             {
