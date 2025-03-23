@@ -115,7 +115,8 @@ if (!isset($_SESSION['username'])) {
             }
             else{
                 echo '
-                <button class="col-span-12 flex justify-center bg-green-400 hover:bg-blue-400 py-[1vh]"  name="team_id" id="team_id" type="submit" value="'.$team_id.'">Assign</button>
+
+                    <button class="col-span-12 flex justify-center bg-green-400 hover:bg-blue-400 py-[1vh]"  name="team_id" id="team_id" type="submit" value="'.$team_id.'">Assign</button>
                 </form>
         </div>
              <div class="col-span-12 flex justify-center px-[2vw] rounded-[40px] bg-red-400 hover:bg-red-500">
