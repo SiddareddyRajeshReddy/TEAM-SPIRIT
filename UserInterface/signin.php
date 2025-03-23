@@ -93,6 +93,7 @@
     <div class="w-[50vw] absolute top-[30vh] left-[25vw] ani2 opacity-25">
         <img src="../images/Logo2.png" alt="">
     </div>
+    <p class="invisible ani1 absolute top-[90vh] text-xl" style="font-family: cursive;">Head Back to<a href="./home.php" class="text-red-800">&nbspHome</a></p>
     <p class="invisible ani1 absolute top-[95vh] text-xl" style="font-family: cursive;">Already have a account? <a href="./login.php" class="text-red-800">Login In</a></p>
 </body>
 

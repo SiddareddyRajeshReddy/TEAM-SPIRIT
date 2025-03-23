@@ -87,7 +87,8 @@
     <div class="w-[50vw] absolute top-[30vh] left-[25vw] ani2 opacity-25">
         <img src="../images/Logo2.png" alt="">
     </div>
-    <p class="invisible ani1 absolute top-[90vh] text-xl" style="font-family: cursive;">Don't have a account? <a href="./signin.php" class="text-red-800">Sign In</a></p>
+    <p class="invisible ani1 absolute top-[90vh] text-xl" style="font-family: cursive;">Don't have a account? <a href="./home.php" class="text-red-800">Sign In</a></p>
+    <p class="invisible ani1 absolute top-[85vh] text-xl" style="font-family: cursive;">Head Back to<a href="./signin.php" class="text-red-800">&nbspHome</a></p>
 </body>
 
 </html>
