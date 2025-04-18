@@ -40,9 +40,10 @@ if (!isset($_SESSION['username'])) {
     
 </head>
 
-<body class="overflow-y-scroll no-scrollbar flex justify-center flex-col items-center bg-[#FFFADA]">
+<body class="overflow-y-scroll no-scrollbar flex justify-center flex-col items-center">
+<button class="btn border-black border-[2px] hover:text-white bg-blue-400 w-[20vw] fixed top-[0vw] left-[0vw] h-[6vh] z-[1000]"><p>open</p></button>
 <div class="flex">
-    <div class="coverup bg-blue-400 min-h-screen w-[20vw] flex flex-col items-center menu invisible translate-x-[-20vw] moveOM" style="font-family: 'Courier New', Courier, monospace;">
+    <div class="coverup bg-blue-400 min-h-screen w-[20vw] flex flex-col items-center menu invisible translate-x-[-20vw] moveOM mt-[6vh]" style="font-family: 'Courier New', Courier, monospace;">
            <P class="text-3xl my-[2vh]">MENU</P> 
            <div class="flex border-black md:border-[2px] px-[2vw]">
            <?php
@@ -51,7 +52,6 @@ if (!isset($_SESSION['username'])) {
            ?>
            </div>
            <div class="flex flex-col items-center justify-center h-[60vh] text-xs md:text-sm xl:text-2xl lg:text-md ">
-           <div class="w-[18vw] flex justify-end relative left-[11vw] sm:left-[10vw] md:left-[8vw] lg:left-[7vw] z-[1000]"><button class="bg-blue-400 rounded-[40px] py-[1vh] btn flex justify-between border-black border-[2px] hover:text-white"><p class="px-[1vw]">close&nbsp;&nbsp;&nbsp;open</p></button></div>
            <?php
                 echo '<form action="./dynProfile.php" method="post" class="border-b-[2px] w-[18vw] border-black py-[2vh] hover:text-blue-600" >
                     <button name="user_id" id="user_id" value="'.$_SESSION['uid'].'" type="submit">My Profile</button>
@@ -63,7 +63,7 @@ if (!isset($_SESSION['username'])) {
             </div>
    </div>
    <script src='../jsfiles/dashboard.js'></script>
-    <div class="w-[80vw] h-[120vh] flex justify-center items-center bg-[#F8EEEC] flex-col translate-x-[-10vw] moveOG grid shadow-lg my-[6vh] rounded-[40px]">
+        <div class="w-[80vw] h-[120vh] flex justify-center items-center bg-white border-black border-[2px] to-yellow-300 flex-col translate-x-[-10vw] moveOG grid shadow-lg my-[6vh] rounded-[40px]">
     <p class="text-lg col-span-3 rounded-lg flex mt-[1vh] w-[100%] pr-[3vw] pl-[1vw] border-black border-[2px] bg-gray-200 opacity-[70%]">As Admin ⬇️</p>
         <div class="grid grid-flow-col max-[503px]:auto-cols-[60vw] auto-cols-[40vw] sm:auto-cols-[35vw] md:auto-cols-[30vw] lg:auto-cols-[25vw] xl:auto-cols-[20vw] mb-[2vh] overflow-x-auto w-[70vw] gap-x-[5vw] no-scrollbar py-[2vh]">
             <?php
