@@ -52,20 +52,17 @@
     </style>
 </head>
 
-<body class="ani bg-green-300 flex flex-col justify-center items-center text-xs md:text-sm xl:text-2xl lg:text-md">
+<body class="flex flex-col justify-center items-center text-xs md:text-sm xl:text-2xl lg:text-md bg-[url(../images/timg.png)] bg-auto">
     <div class="w-[42vw] relative top-[10vh]">
-        <img src="../images/TEAM SPIRIT.png" alt="" class="invisible ani1">
+    <p class="text-[130px] text-blue-300" style="font-family:fantasy;">TEAM SPIRIT</p>
     </div>
-    <div class="w-[50vw] absolute top-[27vh]">
-        <img src="../images/Logo2.png" alt="" class="opacity-[0.25] ani2">
+    <div class="w-[50vw] absolute top-[45vh] flex justify-center items-center">
+        <p class="text-[130px] text-gray-300" style="font-family:fantasy;">WELCOME</p>
     </div>
     <div class="absolute w-[75vw] flex justify-center items-center left-[12.5vw] top-[86vh] invisible ani1">
         <ul class="flex items-center justify-center">
-            <li><a href="./login.php" class="m-[10vw] bg-green-400 hover:bg-green-500 px-[2vw] py-[0.75rem] rounded-[40px]">Log In</a></li>
-            <li class="text-5xl">
-                <p>|</p>
-            </li>
-            <li><a href="./signin.php" class="m-[10vw] bg-green-400 hover:bg-green-500 px-[2vw] py-[0.75rem] rounded-[40px]">Sign In</a></li>
+            <li><a href="./login.php" class="text-white m-[10vw] bg-blue-600 px-[2vw] py-[0.75rem] hover:bg-blue-400 hover:shadow-md">Log In</a></li>
+            <li><a href="./signin.php" class="text-white m-[10vw] bg-blue-600 px-[2vw] py-[0.75rem] hover:bg-blue-400 hover:shadow-md">Sign In</a></li>
         </ul>
     </div>
 </body>
