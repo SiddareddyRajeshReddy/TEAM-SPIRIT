@@ -6,50 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-         .ani1 {
-            animation-name: MyAnimation1;
-            animation-duration: 2s;
-            animation-delay: 800ms;
-            animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-            animation-fill-mode: forwards;
-        }
-
-        .ani2 {
-            animation-name: MyAnimation2;
-            animation-duration: 2s;
-            animation-delay: 800ms;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes MyAnimation1 {
-           0%{
-                opacity: 0%;
-                visibility: visible;
-           }
-           25%{
-                opacity: 25%;
-           }
-           50%{
-                opacity: 50%;
-           }
-           75%{
-                opacity: 75%;
-           }
-           100%{
-                opacity: 100%;
-                visibility: visible;
-           }
-        }
-
-        @keyframes MyAnimation2 {
-            from {}
-
-            to {
-                opacity: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body class="flex flex-col justify-center items-center text-xs md:text-sm xl:text-2xl lg:text-md bg-[url(../images/timg.png)] bg-auto">
@@ -59,7 +15,7 @@
     <div class="w-[50vw] absolute top-[45vh] flex justify-center items-center">
         <p class="text-[130px] text-gray-300" style="font-family:fantasy;">WELCOME</p>
     </div>
-    <div class="absolute w-[75vw] flex justify-center items-center left-[12.5vw] top-[86vh] invisible ani1">
+    <div class="absolute w-[75vw] flex justify-center items-center left-[12.5vw] top-[86vh]">
         <ul class="flex items-center justify-center">
             <li><a href="./login.php" class="text-white m-[10vw] bg-blue-600 px-[2vw] py-[0.75rem] hover:bg-blue-400 hover:shadow-md">Log In</a></li>
             <li><a href="./signin.php" class="text-white m-[10vw] bg-blue-600 px-[2vw] py-[0.75rem] hover:bg-blue-400 hover:shadow-md">Sign In</a></li>

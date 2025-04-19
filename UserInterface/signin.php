@@ -74,27 +74,30 @@
             }
     </style>
 </head>
-
-<body class="ani bg-gradient-to-b from-[#5FC4DB] to-[#C4916B] flex justify-center items-center h-screen text-xs md:text-sm xl:text-2xl lg:text-md ">
+<body class="ani bg-green-200 flex justify-center items-center h-screen bg-[url(../images/BackCreate.jpeg)] bg-auto">
     <p class="invisible ani1 absolute top-[10vh] text-xl md:text-sm xl:text-3xl lg:text-md" style="font-family: cursive;">Sign up to start and become a member of team spirit</p>
-    <div class="w-[50vw] h-[80vh] absolute left-[10vw] top-[20vh]">
-        <form action="../backendLogics/signin_backend.php" method="post" class="invisible ani1 text-2xl">
-            <label for="username"></label>
-            <input type="text" id="username" placeholder="Name" name="username" autocomplete="off" class="block w-[31vw] pl-[6vw] py-[1.25rem] my-[4vh] rounded-[40px] bg-[#D9D9D9] hover:pl-[2vw]">
-            <label for="email"></label>
-            <input type="email" id="email" placeholder="Email" name="email" autocomplete="off" class="block w-[31vw] pl-[6vw] py-[1.25rem] my-[4vh] rounded-[40px] bg-[#D9D9D9] hover:pl-[2vw]">
-            <label for="contact"></label>
-            <input type="text" id="contact" placeholder="Contact" name="contact" autocomplete="off" class="block w-[31vw] pl-[6vw] py-[1.25rem] my-[4vh] rounded-[40px] bg-[#D9D9D9] hover:pl-[2vw]">
-            <label for="pass"></label>
-            <input type="password" id="pass" placeholder="password" name="pass" autocomplete="off" class="block w-[31vw] pl-[6vw] py-[1.25rem] my-[4vh] rounded-[40px] bg-[#D9D9D9] hover:pl-[2vw]">
-            <button type="submit" class="absolute left-[23vw] bg-gradient-to-b from-[#E58B57] to-[#F7F7F7] px-[2vw] py-[0.80rem] rounded-[35px]">Sign Up</button>
+    <div class="absolute left-[10vw] top-[20vh]">
+        <form action="../backendLogics/signin_backend.php" method="post" class="invisible ani1 text-2xl bg-[#797979] bg-opacity-[50%] px-[2vw] py-[6vh] form rounded-[40px]">
+            <label for="username">User Name</label>
+            <input type="text" id="username" placeholder="Name" name="username" autocomplete="off" class="block bg-white w-[25vw] border-black border-[2px] py-[3px] pl-[0.5rem]">
+            <div class="err text-[10px] text-red-600 flex justify-end w-[100%] p-[0px] m-[0px]"><P></P></div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" name="email" autocomplete="off" class="block bg-white w-[25vw] border-black border-[2px] py-[3px] pl-[0.5rem]">
+            <div class="err1 text-[10px] text-red-600 flex justify-end w-[100%] p-[0px] m-[0px]"></div>
+            <label for="contact">Contact</label>
+            <input type="text" id="contact" placeholder="Contact" name="contact" autocomplete="off" class="block bg-white w-[25vw] border-black border-[2px] py-[3px] pl-[0.5rem]">
+            <div class="err2 text-[10px] text-red-600 flex justify-end w-[100%] p-[0px] m-[0px]"></div>
+            <label for="pass">Set Password</label>
+            <input type="password" id="pass" placeholder="password" name="pass" autocomplete="off" class="block bg-white w-[25vw] border-black border-[2px] py-[3px] pl-[0.5rem]">
+            <div class="err3 text-[10px] text-red-600 flex justify-end w-[100%] p-[0px] m-[0px]"></div>
+            <button type="submit" class="bg-orange-300 my-[1vh] py-[0.5rem] px-[1rem] hover:bg-blue-400">Sign Up</button>
         </form>
+        <p class="ml-[2vw] text-xl" style="font-family: cursive;">Head Back to<a href="./home.php" class="text-red-800">&nbspHome</a></p>
+        <p class="ml-[2vw] text-xl" style="font-family: cursive;">Already have a account? <a href="./login.php" class="text-red-800">Login In</a></p>
+        <script src="../jsfiles/signin.js"></script>
     </div>
     <div class="w-[50vw] absolute top-[30vh] left-[25vw] ani2 opacity-25">
-        <img src="../images/Logo2.png" alt="">
+        <img src="../images/LogoG.png" alt="">
     </div>
-    <p class="invisible ani1 absolute top-[90vh] text-xl" style="font-family: cursive;">Head Back to<a href="./home.php" class="text-red-800">&nbspHome</a></p>
-    <p class="invisible ani1 absolute top-[95vh] text-xl" style="font-family: cursive;">Already have a account? <a href="./login.php" class="text-red-800">Login In</a></p>
 </body>
-
 </html>
