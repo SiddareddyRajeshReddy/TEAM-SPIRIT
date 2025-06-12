@@ -126,9 +126,9 @@ if (!isset($_SESSION['username'])) {
         <p class="block">Do you want to assign new members?</p>
         <div class="flex my-[1vh]">
             <form action="../UserInterface/assignNew.php" method="post">
-                <button type="submit" name="team_id" id="team_id" value="'.$team_id.'" class="bg-green-300 px-[2vw] py-[1vh]">Yes</button>
+                <button type="submit" name="team_id" id="team_id" value="'.$team_id.'" class="bg-green-300 w-[10vw] h-[5vh]">Yes</button>
             </form>
-            <button class="bg-red-300 px-[2vw] py-[1vh] btn2">No</button>
+            <button class="bg-red-300 w-[10vw] h-[5vh] btn2">No</button>
         </div>
     </div>';
     echo '<div class="bg-[#F8EEEC] flex flex-col justify-center items-center px-[2vw] py-[2vh] rounded-[40px] shadow-lg gr mb-[10vh]">

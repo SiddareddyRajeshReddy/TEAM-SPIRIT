@@ -51,9 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p class="text-xl my-[2vw]">Do you want to abort the team <b>'.$row['teamname'].'</b>?</p>
             <div class="flex flex-row w-[20vw] justify-around">
                 <form action="../backendLogics/deleteTeam.php" method="post">
-                    <button type="submit" id="team_id" name="team_id" value="' .$t_id. '" class="bg-green-600 text-white py-[2vh] px-[3vw] rounded-[40px]">Yes</button>
+                    <button type="submit" id="team_id" name="team_id" value="' .$t_id. '" class="bg-green-600 text-white w-[10vw] h-[5vh] rounded-[40px]">Yes</button>
                 </form>
-            <a href="./dashboard.php" class="py-[2vh] flex justify-center items-center px-[3vw] text-white bg-red-600 col-span-3 rounded-[40px]">No</a>
+            <a href="./dashboard.php" class="w-[10vw] h-[5vh] flex items-center justify-center text-white bg-red-600 rounded-[40px]">No</a>
         </div>
         </body>'; 
     }
